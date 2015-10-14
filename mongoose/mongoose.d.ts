@@ -154,6 +154,7 @@ declare module "mongoose" {
     plugin(plugin: (schema: Schema, options?: Object) => void, options?: Object): Schema;
     post(method: string, fn: Function): Schema;
     pre(method: string, callback: Function): Schema;
+    pre(method: string, parallel: boolean, callback: Function): Schema;
     requiredPaths(): string[];
     set(key: string, value: any): void;
     static(name: string, fn: Function): Schema;
